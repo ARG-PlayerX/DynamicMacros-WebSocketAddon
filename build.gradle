@@ -36,5 +36,5 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'ar.net.playerx.dynamicmacros:DynamicMacros-API:1.0.0'
+    compileOnly files('libs/DynamicMacros-API-1.0.0.jar')
 }
