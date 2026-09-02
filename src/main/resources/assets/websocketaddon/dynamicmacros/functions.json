@@ -1,0 +1,42 @@
+[
+  {
+    "name": "websocketConnect",
+    "signature": "websocketConnect(url: String, connectionId?: String)",
+    "category": "WebSocket Addon",
+    "description": "Connects to a remote or local WebSocket server (ws:// or wss://).",
+    "parameters": "url: String — Target WebSocket URL.\nconnectionId: String (optional) — ID of the connection, defaults to 'default'.",
+    "returns": "Boolean — True if connection process started.",
+    "example": "# Connect to WebSocket server\nwebsocketConnect(\"wss://echo.websocket.org\", \"myConn\");\necho(\"Connecting to WebSocket...\");",
+    "origin": "WebSocket Addon"
+  },
+  {
+    "name": "websocketSend",
+    "signature": "websocketSend(message: String, connectionId?: String)",
+    "category": "WebSocket Addon",
+    "description": "Sends a text message or JSON payload over an active WebSocket connection.",
+    "parameters": "message: String — Text message payload to send.\nconnectionId: String (optional) — ID of the connection, defaults to 'default'.",
+    "returns": "Boolean — True if message was sent.",
+    "example": "# Send message payload\nwebsocketSend(\"Hello World!\", \"myConn\");",
+    "origin": "WebSocket Addon"
+  },
+  {
+    "name": "websocketDisconnect",
+    "signature": "websocketDisconnect(connectionId?: String)",
+    "category": "WebSocket Addon",
+    "description": "Closes an active WebSocket connection gracefully.",
+    "parameters": "connectionId: String (optional) — ID of the connection to close, defaults to 'default'.",
+    "returns": "Boolean — True if disconnect initiated.",
+    "example": "# Close connection\nwebsocketDisconnect(\"myConn\");",
+    "origin": "WebSocket Addon"
+  },
+  {
+    "name": "websocketStatus",
+    "signature": "websocketStatus(connectionId?: String): String",
+    "category": "WebSocket Addon",
+    "description": "Returns the current state of a WebSocket connection ('CONNECTED', 'CONNECTING', 'DISCONNECTED', 'CLOSED', 'ERROR').",
+    "parameters": "connectionId: String (optional) — ID of the connection, defaults to 'default'.",
+    "returns": "String — Current status string.",
+    "example": "# Check status\nlocal status = websocketStatus(\"myConn\");\nif (status == \"CONNECTED\") {\n    echo(\"WebSocket is connected!\");\n}",
+    "origin": "WebSocket Addon"
+  }
+]

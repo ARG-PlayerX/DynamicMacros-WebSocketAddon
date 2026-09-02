@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+
+[[mods]]
+modId="websocketaddon"
+version="1.0.0"
+displayName="DynamicMacros WebSocket Addon"
+iconFile="dm_ws.png"
+authors="PlayerX"
+description='''
+A standalone third-party addon for DynamicMacros that adds full WebSocket client support.
+Provides websocketConnect, websocketSend, websocketDisconnect, websocketStatus functions and onWebSocketConnect, onWebSocketMessage, onWebSocketClose, onWebSocketError events.
+'''
+
+[[dependencies.websocketaddon]]
+modId="neoforge"
+type="required"
+versionRange="[26.2.0.59,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.websocketaddon]]
+modId="dynamicmacros"
+type="required"
+versionRange="[26.2,)"
+ordering="AFTER"
+side="BOTH"
